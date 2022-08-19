@@ -12,3 +12,4 @@ mongo-volume/
 redeploy.sh
 # Specific
 src/uploads/*
+src/config/dev.js
