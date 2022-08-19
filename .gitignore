@@ -1,0 +1,14 @@
+.env
+tools
+node_modules
+# macOS
+.DS_Store
+# Prod Server
+Dockerfile
+Procfile
+docker-compose.yaml
+init-mongo.js
+mongo-volume/
+redeploy.sh
+# Specific
+src/uploads/*
