@@ -12,5 +12,5 @@ mongo-volume/
 redeploy.sh
 # Specific
 src/uploads/*
-src/config/*
+src/config/dev.js
 Dockerfile
