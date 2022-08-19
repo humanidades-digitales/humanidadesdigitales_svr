@@ -13,3 +13,4 @@ redeploy.sh
 # Specific
 src/uploads/*
 src/config/*
+Dockerfile
