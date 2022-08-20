@@ -80,7 +80,7 @@ app.post('/files/upload', function(req, res) {
       console.log(err);
       return res.end('Error uploading file.');
     }
-    console.log('The filename is ' + res.req.file.filename);
+    console.log('Uploaded filename is ' + res.req.file.filename);
     res.send(res.req.file.filename);
   });
 });
