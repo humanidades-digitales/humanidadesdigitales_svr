@@ -4,6 +4,7 @@ var multer = require('multer');
 
 var bodyParser = require('body-parser');
 const path = require('path');
+var Buffer = require('buffer/').Buffer;
 var cors = require('cors');
 const fs = require('fs');
 const { mongoURI } = require('./config');
@@ -67,7 +68,10 @@ var storage = multer.diskStorage({
     callback(null, path);
   },
   filename: function(req, file, callback) {
-    callback(null, 'ocr-' + file.originalname);
+    callback(
+      null,
+      'ocr-' + Buffer.from(file.originalname, 'latin1').toString('utf8'),
+    );
   },
 });
 var upload = multer({ storage: storage }).single('files');
